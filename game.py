@@ -1,12 +1,15 @@
 import pygame
 
-from constants import gamec
 from ship import Ship
 from meteor import Meteor
 
 
+BACKGROUND_PNG = 'assets/background.png'
+
+
 class Game():
     def __init__(self):
+        self.background = pygame.image.load(BACKGROUND_PNG).convert()
         self.all_sprites = pygame.sprite.Group()
         self.meteors = pygame.sprite.Group()
         self.ship = Ship()
@@ -28,6 +31,6 @@ class Game():
         self.all_sprites.update()
 
     def display_frame(self, screen):
-        screen.fill(gamec.BLACK)
+        screen.blit(self.background, [0, 0])
         self.all_sprites.draw(screen)
         pygame.display.flip()

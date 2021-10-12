@@ -4,7 +4,7 @@ class Constants():
     WHITE = (255, 255, 255)
 
     # Set screen dimensions.
-    SCREEN_WIDTH = 900
+    SCREEN_WIDTH = 800
     SCREEN_HEIGHT = 600
 
     # Others constants.
