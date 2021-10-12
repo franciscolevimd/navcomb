@@ -2,13 +2,19 @@ import pygame
 
 from constants import gamec
 from ship import Ship
+from meteor import Meteor
 
 
 class Game():
     def __init__(self):
         self.all_sprites = pygame.sprite.Group()
+        self.meteors = pygame.sprite.Group()
         self.ship = Ship()
         self.all_sprites.add(self.ship)
+        for i in range(8):
+            meteor = Meteor()
+            self.all_sprites.add(meteor)
+            self.meteors.add(meteor)
 
     def process_events(self):
         for event in pygame.event.get():
