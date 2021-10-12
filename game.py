@@ -1,11 +1,14 @@
 import pygame
 
 from constants import gamec
+from ship import Ship
 
 
 class Game():
     def __init__(self):
         self.all_sprites = pygame.sprite.Group()
+        self.ship = Ship()
+        self.all_sprites.add(self.ship)
 
     def process_events(self):
         for event in pygame.event.get():

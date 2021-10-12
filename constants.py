@@ -9,6 +9,7 @@ class Constants():
 
     # Others constants.
     FPS = 60
+    SHIP_SPEED = 5
 
 
 gamec = Constants()
